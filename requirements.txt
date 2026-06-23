@@ -1,0 +1,31 @@
+# ─── Core Framework ───────────────────────────────────────────────────────────
+Django>=4.2,<5.0
+djangorestframework>=3.15
+
+# ─── Firebase (Auth + Firestore — BUKAN Storage) ──────────────────────────────
+# firebase-admin tetap dipakai untuk:
+#   • Verifikasi ID Token (FirebaseAuthentication)
+#   • Custom Claims role admin
+#   • CRUD Firestore (berita, profil, proker, pengaduan, admin_profiles)
+# Firebase Storage sudah digantikan Cloudinary.
+firebase-admin>=6.5
+
+# ─── Cloudinary (File Storage — gambar & lampiran) ────────────────────────────
+# Menggantikan Firebase Storage.
+# Gratis 25 GB · CDN global · auto-optimasi gambar (WebP, resize, quality:auto)
+cloudinary>=1.40
+
+# ─── Environment & Config ─────────────────────────────────────────────────────
+django-environ>=0.11
+
+# ─── CORS ─────────────────────────────────────────────────────────────────────
+django-cors-headers>=4.4
+
+# ─── Content Sanitization (XSS prevention untuk rich text) ───────────────────
+bleach>=6.1
+
+# ─── WSGI Server (production) ─────────────────────────────────────────────────
+gunicorn>=22.0
+
+# ─── Rate Limiting tambahan (opsional, bisa pakai DRF Throttling saja) ────────
+# django-ratelimit>=4.1

@@ -1,0 +1,42 @@
+# ─── Environment & Secrets ────────────────────────────────────────────────────
+.env
+*.json
+!firestore.indexes.json     # file ini BOLEH masuk Git (bukan secret)
+secrets/
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.eggs/
+
+# ─── Virtual environment ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ─── Django ───────────────────────────────────────────────────────────────────
+db.sqlite3
+staticfiles/
+media/
+
+# ─── IDEs ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Testing & Coverage ───────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/

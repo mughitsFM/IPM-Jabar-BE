@@ -1,0 +1,17 @@
+// firestore.rules
+// Sesuai BAB 5.8 — semua akses wajib lewat Django (Admin SDK, bypass rules).
+// Client SDK dari browser TIDAK boleh mengakses Firestore secara langsung.
+//
+// Deploy via: firebase deploy --only firestore:rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Tolak semua read & write dari client (browser / mobile app).
+    // Admin SDK yang dipakai Django berjalan dengan service account
+    // dan secara otomatis bypass Security Rules ini.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
