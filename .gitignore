@@ -1,7 +1,7 @@
 # ─── Environment & Secrets ────────────────────────────────────────────────────
 .env
 *.json
-!firestore.indexes.json     # file ini BOLEH masuk Git (bukan secret)
+
 secrets/
 
 # ─── Python ───────────────────────────────────────────────────────────────────
